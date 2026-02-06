@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>
+    From Models to Autonomous AI Agents | The Future of AI Systems
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+
+  <style>
+    /* ===============================
+       BLOG 3 — SYSTEM-DRIVEN AI (2026)
+       =============================== */
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', system-ui, sans-serif;
+      background: #0f172a;
+      color: #1e293b;
+      scroll-behavior: smooth;
+    }
+
+    /* ---------- HERO ---------- */
+
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(
+        circle at top,
+        #1e3a8a,
+        #020617 70%
+      );
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(15,23,42,0.3),
+        rgba(15,23,42,0.85)
+      );
+    }
+
+    .hero-content {
+      position: relative;
+      text-align: center;
+      max-width: 1100px;
+      padding: 0 20px;
+      color: #ffffff;
+      animation: fadeUp 1.1s ease;
+    }
+
+    .hero-tag {
+      display: inline-block;
+      background: linear-gradient(135deg, #38bdf8, #2563eb);
+      padding: 10px 26px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.4px;
+      margin-bottom: 22px;
+    }
+
+    .hero-title {
+      font-size: 58px;
+      font-weight: 700;
+      line-height: 1.15;
+    }
+
+    .hero-subtitle {
+      font-size: 22px;
+      margin-top: 18px;
+      color: #c7d2fe;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero-meta {
+      margin-top: 22px;
+      font-size: 14px;
+      color: #93c5fd;
+    }
+
+    /* ---------- CONTENT WRAPPER ---------- */
+    .content-section {
+        background: linear-gradient(180deg, #f8fafc, #eef2f7);
+        padding: 120px 0 140px;
+    }
+
+        .content-wrapper {
+        width: 100%;
+        max-width: 1200px;
+        margin: -160px auto 0;
+        background: rgba(255, 255, 255, 0.92);
+        backdrop-filter: blur(18px);
+        padding: 80px 90px;
+        border-radius: 32px;
+        box-shadow: 0 40px 90px rgba(0,0,0,0.12);
+    }
+
+    /* ---------- TYPOGRAPHY ---------- */
+
+    .content {
+      font-size: 18px;
+      line-height: 1.95;
+      color: #1e293b;
+    }
+
+    .content .lead {
+      font-size: 22px;
+      font-weight: 500;
+      color: #2563eb;
+      margin-bottom: 2.8em;
+    }
+
+    .content p {
+      margin-bottom: 1.7em;
+    }
+
+    .content h2 {
+      font-size: 32px;
+      margin-top: 3.8em;
+      margin-bottom: 1.2em;
+      font-weight: 700;
+      color: #020617;
+      position: relative;
+    }
+
+    .content h2::before {
+      content: "";
+      position: absolute;
+      left: -22px;
+      top: 8px;
+      width: 5px;
+      height: 70%;
+      background: linear-gradient(#2563eb, #1e40af);
+      border-radius: 3px;
+    }
+
+    .content ul {
+      padding-left: 28px;
+      margin-bottom: 2em;
+    }
+
+    .content li {
+      margin-bottom: 12px;
+    }
+
+    /* ---------- CALLOUT ---------- */
+
+    .callout {
+      background: linear-gradient(
+        135deg,
+        rgba(37,99,235,0.08),
+        rgba(37,99,235,0.03)
+      );
+      border-left: 6px solid #2563eb;
+      padding: 28px;
+      border-radius: 14px;
+      margin: 3em 0;
+      font-weight: 500;
+    }
+
+    /* ---------- DIVIDER ---------- */
+
+    hr {
+      margin: 80px 0;
+      border: none;
+      height: 1px;
+      background: linear-gradient(
+        to right,
+        transparent,
+        #c7d2fe,
+        transparent
+      );
+    }
+
+    /* ---------- REFERENCES ---------- */
+
+    .references a {
+      color: #2563eb;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .references a:hover {
+      text-decoration: underline;
+    }
+
+    /* ---------- FOOTER CTA ---------- */
+
+    .back-btn {
+      display: inline-block;
+      margin-top: 35px;
+      background: linear-gradient(135deg, #2563eb, #1e40af);
+      color: #fff;
+      padding: 16px 40px;
+      border-radius: 999px;
+      font-weight: 600;
+      text-decoration: none;
+      box-shadow: 0 20px 45px rgba(37,99,235,0.4);
+      transition: all 0.3s ease;
+    }
+
+    .back-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 28px 65px rgba(37,99,235,0.5);
+    }
+
+    /* ---------- ANIMATION ---------- */
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(28px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* ---------- RESPONSIVE ---------- */
+
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 36px;
+      }
+
+      .hero-subtitle {
+        font-size: 18px;
+      }
+
+      .content-wrapper {
+        padding: 38px 26px;
+        margin-top: -120px;
+      }
+
+      .content {
+        font-size: 16.5px;
+      }
+    }
+    .split {
+        display: flex;
+        align-items: center;
+        gap: 70px;
+        margin: 90px 0;
+    }
+
+    .split-text {
+        flex: 1.2;
+     }
+
+    .split-visual {
+        flex: 1;
+    }
+
+    .split-visual img {
+        width: 100%;
+        border-radius: 20px;
+        box-shadow: 0 30px 70px rgba(0,0,0,0.18);
+    }
+
+     @media (max-width: 900px) {
+        .split {
+            flex-direction: column;
+            gap: 40px;
+        }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <div class="hero-content">
+      <span class="hero-tag">
+        <i class="fa-solid fa-robot"></i> Autonomous AI & Agents
+      </span>
+
+      <h1 class="hero-title">
+        From Models to Autonomous AI Agents
+      </h1>
+
+      <p class="hero-subtitle">
+        Why the Future of AI Is System-Driven, Not Model-Driven
+      </p>
+
+      <p class="hero-meta">
+        <i class="fa-solid fa-calendar"></i> 2026 ·
+        <i class="fa-solid fa-user"></i> Lalatendu Kumar Sahu ·
+        <i class="fa-solid fa-clock"></i> ~20 min read
+      </p>
+    </div>
+  </section>
+
+  <!-- ================= CONTENT ================= -->
+  <section class="content-section">
+    <div class="content-wrapper">
+      <div class="content">
+
+        <p class="lead">
+          Artificial Intelligence is undergoing a fundamental transition.
+          The future of AI does not belong to larger models alone, but to
+          autonomous systems that can reason, plan, act, and adapt.
+        </p>
+
+        <p>
+          For years, progress in AI was measured by better architectures,
+          higher accuracy, and larger datasets. While these advances remain
+          important, they are no longer sufficient. Real-world intelligence
+          requires systems that operate continuously, make decisions over time,
+          and interact with complex environments.
+        </p>
+
+        <h2>The Limits of Model-Centric AI</h2>
+
+        <p>
+          Traditional AI systems are model-centric. A model receives input,
+          produces output, and stops. This paradigm works for static tasks,
+          but it fails in dynamic, open-ended environments.
+        </p>
+
+        <ul>
+          <li>Models do not plan long-term actions</li>
+          <li>They cannot adapt autonomously to new goals</li>
+          <li>They lack memory beyond context windows</li>
+          <li>They depend heavily on human orchestration</li>
+        </ul>
+
+        <p>
+          As AI is deployed into real-world workflows, these limitations
+          become blockers rather than inconveniences.
+        </p>
+
+        <h2>What Is an Autonomous AI Agent?</h2>
+
+        <p>
+          An AI agent is not just a model. It is a system that can:
+        </p>
+
+        <ul>
+          <li>Perceive its environment</li>
+          <li>Reason about goals and constraints</li>
+          <li>Plan multi-step actions</li>
+          <li>Execute decisions using tools</li>
+          <li>Learn from feedback over time</li>
+        </ul>
+
+        <div class="callout">
+          An autonomous agent is defined not by intelligence alone,
+          but by its ability to act independently within a system.
+        </div>
+
+        <h2>Why the Future Is System-Driven</h2>
+
+        <p>
+          Autonomous agents require system-level thinking.
+          Models become components within a larger architecture
+          that includes memory, orchestration, monitoring, and governance.
+        </p>
+
+        <p>
+          In this paradigm, intelligence emerges from interaction
+          between components, not from a single model.
+        </p>
+
+        <h2>Key Components of Agentic AI Systems</h2>
+
+        <ul>
+          <li>LLMs or task-specific models</li>
+          <li>Short-term and long-term memory</li>
+          <li>Planning and reasoning modules</li>
+          <li>Tool execution layers</li>
+          <li>Safety and constraint enforcement</li>
+          <li>Human-in-the-loop controls</li>
+        </ul>
+
+        <h2>From Automation to Autonomy</h2>
+
+        <p>
+          Automation executes predefined rules.
+          Autonomy enables systems to decide what to do next.
+        </p>
+
+        <p>
+          This shift transforms AI from a passive tool into
+          an active collaborator capable of handling complexity
+          and uncertainty.
+        </p>
+
+        <h2>Real-World Impact of AI Agents</h2>
+
+        <p>
+          Autonomous agents are already reshaping:
+        </p>
+
+        <ul>
+          <li>AI copilots and digital workers</li>
+          <li>Autonomous research assistants</li>
+          <li>Multi-agent decision systems</li>
+          <li>Self-healing production pipelines</li>
+        </ul>
+
+        <p>
+          These systems create value by reducing cognitive load,
+          accelerating workflows, and enabling continuous operation.
+        </p>
+
+        <h2>Engineering Challenges</h2>
+
+        <p>
+          Building agentic systems introduces new challenges:
+        </p>
+
+        <ul>
+          <li>Alignment and safety</li>
+          <li>Observability and debugging</li>
+          <li>Cost and efficiency</li>
+          <li>Trust and accountability</li>
+        </ul>
+
+        <p>
+          Solving these challenges requires engineers
+          to think beyond ML and embrace system design.
+        </p>
+
+        <h2>The Engineer’s New Role</h2>
+
+        <p>
+          In an agent-driven future, engineers are not just model trainers.
+          They are architects of intelligence systems.
+        </p>
+
+        <p>
+          The most valuable engineers will understand
+          how models, systems, and humans interact
+          to create reliable autonomy.
+        </p>
+
+        <hr>
+
+        <h2>Further Reading & References</h2>
+
+        <div class="references">
+          <ul>
+            <li>
+              <a href="https://www.deeplearning.ai/short-courses/ai-agents/" target="_blank">
+                DeepLearning.AI — AI Agents Course
+              </a>
+            </li>
+            <li>
+              <a href="https://lilianweng.github.io/posts/2023-06-23-agent/" target="_blank">
+                Lilian Weng — LLM Powered Autonomous Agents
+              </a>
+            </li>
+            <li>
+              <a href="https://www.langchain.com/" target="_blank">
+                LangChain — Framework for Agentic Applications
+              </a>
+            </li>
+            <li>
+              <a href="https://arxiv.org/abs/2308.08155" target="_blank">
+                ArXiv — Survey on Autonomous Agents
+              </a>
+            </li>
+            <li>
+              <a href="https://martinfowler.com/articles/ai-agent-architectures.html" target="_blank">
+                Martin Fowler — AI Agent Architectures
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <p style="text-align:center;">
+          <a href="index.html" class="back-btn">
+            ← Back to Portfolio
+          </a>
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
